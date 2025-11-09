@@ -37,7 +37,7 @@ def main():
         print(f"Found {len(messages)} unstarred emails. Moving to Trash...")
         for msg in messages:
             service.users().messages().trash(userId='me', id=msg['id']).execute()
-            print("Would delete:", msg['id'], msg)
+            print("deleted:", msg['id'], msg)
 
         print("🗑️ Done! 500 unstarred emails moved to Trash.")
 
